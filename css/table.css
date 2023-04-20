@@ -1,0 +1,68 @@
+/* THIẾT LẬP GIAO DIỆN VỚI MÀN TABLE */
+@media only screen and (max-width: 991.98px) {
+  /* I/NAVBAR */
+  /* 1/ ẩn hình ảnh navbar */
+  .img-navbar {
+    display: none;
+  }
+  /* 2/ tạo dấu gạch góc phải cho phần tử content-navbar thứ 2 */
+  .content-navbar:nth-child(2) {
+    border-right: 1px solid #dee2e6;
+  }
+  /* II/THÔNG TIN CÁ NHÂN */
+  /* 1/căn chỉnh văn bản theo chiều trái của phần tử thông tin cá nhân tổng */
+  .personal-information {
+    text-align: left;
+  }
+  /* 2/căn chỉnh padding 2 phần tử con: mục tiêu nghề nghiệp, thông cá nhân của seaction tổng personal-information */
+  .career-goals,
+  .personal {
+    padding: 0 40px;
+  }
+  /* II/ THÔNG TIN NGHỀ NGHIỆP */
+  /* 1/ tạo 2 cột ở phần thông tin nghề nghiệp */
+  .job-information {
+    grid-template-columns: 45% 45%;
+  }
+  /* 2/điều chỉnh phần tử kinh nghiệm kết thức ở hàng thứ 3 */
+  .medium {
+    grid-row-end: span 2;
+  }
+  /* 3/điều chỉnh phần tử hoạt động lên cột thứ 2 dòng 1 */
+  .medium-active {
+    grid-area: 1/2/2/3;
+  }
+  /* 3/điều chỉnh phần tử kỹ năng lên cột thứ 2 dòng 3 */
+  .medium-skill {
+    grid-area: 3/2/5/3;
+  }
+  /* III/ CHỨNG CHỈ GIẢI THƯỞNG */
+  /*  1/đặt thuộc tính block cho phần tử content-certificate */
+  .content-certificate {
+    display: block;
+  }
+  /* 2/điều chỉnh lại kích thước cho hình ảnh và căn chỉnh kích thước */
+  .img-certificate {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  /* 3/ tạo line bên phải cho phần tử con của content-project */
+  .gpa {
+    padding: 0 20px 0 0;
+  }
+  /* IV/DỰ ÁN  */
+  /* 1/đặt thuộc tính grid để căn chỉnh vào tạo 2 cột ở phần tử content-project */
+  .content-project {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 0;
+  }
+  /* 2/ sắp xếp vị trí cho icon develop hàng start:2,end:3 ; cột start:2,end:3 */
+  .icon-developer {
+    grid-area: 2/2/3/3;
+  }
+  /* /3 đặt thuộc tính block để bỏ thuộc tính table-cell  */
+  .content-table {
+    display: block;
+  }
+}

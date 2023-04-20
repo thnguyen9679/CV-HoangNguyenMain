@@ -1,0 +1,83 @@
+/* THIẾT LẬP GIAO DIỆN VỚI MÀN MOBILE */
+@media only screen and (max-width: 575.98px) {
+  /* I/NAVBAR */
+  /* 1/Đặt thuộc tính block để các phần tử trãi dài thành 1 cột */
+  nav {
+    display: block;
+    height: 100%;
+  }
+  /* 2/bỏ border cho các phần tử con bên trong navbar */
+  .content-navbar:nth-child(1),
+  .content-navbar:nth-child(2),
+  .content-navbar:nth-child(4) {
+    border: none;
+  }
+  /* 3/ đặt thuộc tính block và width:100% để content-navbar trải dài hết màn hình */
+  .content-navbar:link,
+  .content-navbar:visited {
+    justify-content: start;
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+  }
+  /* 4/đặt border-bottom cho các phần tử con của navbar */
+  .content-navbar:nth-child(1),
+  .content-navbar:nth-child(2),
+  .content-navbar:nth-child(4) {
+    border-bottom: 1px solid #dee2e6;
+  }
+  /* II/THÔNG TIN NGHỀ NGHIỆP (THÔNG TIN CÁ NHÂN ĐÃ SỬ DỤNG BOOTSTRAP) */
+  /* 1/tạo thông tin nghề nghiệp thành 1 cột */
+  .job-information {
+    grid-template-columns: 90%;
+    row-gap: 40px;
+  }
+  /* 2/sắp xếp lại các thứ tự hiển thị trên của các phần tử kỹ năng, hoạt động, kinh nghiệm */
+  .medium,
+  .medium-skill,
+  .medium-active {
+    grid-row-end: auto;
+    grid-area: auto;
+  }
+  /* III/CHỨNG CHỈ-GIẢI THÍCH */
+  /* 1/tạo 1 cột ở chứng chỉ giải thưởng, căn chỉnh padding và gap row */
+  .certificate {
+    grid-template-columns: 100%;
+    padding: 20px 30px 30px 30px;
+  }
+  /* 2/bỏ border ở nội dung chứng chỉ, đặt thuộc tính block để hình ảnh và văn bản là mỗi dòng riêng biệt */
+  .content-certificate {
+    border-right: none;
+    padding: 0 0 10px 0;
+    display: block;
+    border-bottom: 1px solid #071b07;
+  }
+  /* 3/điều chỉnh lại các vị trí và cột ở phần tiêu đề */
+  .title-certificate {
+    grid-area: 1/1/2/2;
+    padding-bottom: 40px;
+  }
+  /* 4/căn chỉnh padding top ở phần tử content toiec */
+  .toiec {
+    padding-top: 40px;
+  }
+  /* 5/đặt thuộc tính block để các phần tử con dự án thành 1 cột  */
+  .project {
+    display: grid;
+    grid-template-columns: 90%;
+    row-gap: 40px;
+  }
+  /* 6/căn chỉnh lại vị trí line-grid cho tiêu đề tổng */
+  .title-projectT {
+    grid-area: 1/1/2/2;
+    padding: 0;
+  }
+  /* 7/căn chỉnh nội dung dự án theo chiều dọc */
+  .content-project {
+    display: block;
+  }
+  /* VI/LIÊN HỆ */
+  /* 1/Xóa chữ trong fotter */
+  .content-contact {
+    display: none;
+  }
+}
